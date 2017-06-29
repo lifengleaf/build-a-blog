@@ -1,2 +1,2 @@
 # build-a-blog
-A simple blog built using Python and Flask
+This is a simple blog where can add and show posts, built using Python, Flask and MySQL database.
