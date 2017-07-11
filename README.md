@@ -1,2 +1,3 @@
-# build-a-blog
-This is a simple blog where can add and show posts, built using Python, Flask and MySQL database.
+This is a simple blog built with Python, Flask, MySQL database, Bootstrap, where users can:
+1. register, log in and log out
+2. add posts, show all posts or one user's posts
