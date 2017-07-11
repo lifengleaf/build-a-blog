@@ -3,15 +3,35 @@
 <html>
     <head>
         <title>{{title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-<body>
-    <nav>
-        <a href="/blog">Main Blog Page</a>
-        <a href="/newpost">Add a Blog Entry</a>
-    </nav>
+
+    <body>
+    <div class='container'>
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a href="/">Main Page</a></li>
+            <li role="presentation"><a href="/newpost">New Blog</a></li>
+            <li role="presentation"><a href="/login">Log in</a></li>
+            <li role="presentation"><a href="/userlist">All Users</a></li>
+            <li role="presentation"><a href="/logout">Log out</a></li>
+        </ul>
 
     {% block content %}
     {% endblock %}
 
-</body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages%}
+                        <li class="label label-warning"> {{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+    </div>
+    </body>
 </html>

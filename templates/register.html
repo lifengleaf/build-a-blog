@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1> Welcome, new user</h1>
+<form method='POST'>
+    <label for='username'> Username </label>
+    <input name='username' type='text' value=''/>
+    
+    <label for='password'> Password </label>
+    <input name='password' type='password' />
+
+    <label for='verify'> Verify Password </label>
+    <input name='verify' type='password' />
+    <input type='submit' />
+</form>
+
+{% endblock %}
